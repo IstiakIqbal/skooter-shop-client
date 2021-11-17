@@ -64,7 +64,8 @@ const useFirebase = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         setUser(user);
-        history.replace("/home");
+        const uri = location?.state?.from || "/home";
+        history.replace(uri);
       })
       .catch((error) => { })
       .finally(() => setLoading(false));
