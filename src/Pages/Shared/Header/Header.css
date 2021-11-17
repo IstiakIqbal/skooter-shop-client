@@ -1,0 +1,4 @@
+.nav-item:hover{
+    border-bottom: 3px solid rgb(255, 67, 67);
+    transition: border-bottom 100ms ease-in-out;
+}
