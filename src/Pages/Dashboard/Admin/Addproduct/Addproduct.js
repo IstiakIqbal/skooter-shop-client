@@ -15,7 +15,7 @@ const Addproduct = () => {
       Description: desRef.current.value,
       price: priceRef.current.value,
     };
-    fetch("http://localhost:5000/skooters", {
+    fetch("https://murmuring-caverns-40870.herokuapp.com/skooters", {
       method: "POST",
       headers: {
         "content-type": "application/json",

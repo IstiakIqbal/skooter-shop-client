@@ -10,12 +10,12 @@ const Home = () => {
   const [skooters, setSkooters] = useState([]);
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/skooters")
+    fetch("https://murmuring-caverns-40870.herokuapp.com/skooters")
       .then((res) => res.json())
       .then((data) => setSkooters(data));
   }, []);
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch("https://murmuring-caverns-40870.herokuapp.com/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

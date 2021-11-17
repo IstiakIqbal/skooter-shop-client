@@ -4,7 +4,7 @@ import Singleorder from "./Singleorder";
 const Allorders = () => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/allorders")
+    fetch("https://murmuring-caverns-40870.herokuapp.com/allorders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
@@ -13,7 +13,7 @@ const Allorders = () => {
       "Are you sure, you want to delete this order?"
     );
     if (confirmLog) {
-      fetch(`http://localhost:5000/orders?id=${id}`, {
+      fetch(`https://murmuring-caverns-40870.herokuapp.com/orders?id=${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -27,7 +27,7 @@ const Allorders = () => {
     }
   };
   const handleShipBtn = (id) => {
-    fetch(`http://localhost:5000/orders?id=${id}`, {
+    fetch(`https://murmuring-caverns-40870.herokuapp.com/orders?id=${id}`, {
       method: "PUT",
     })
       .then((res) => res.json())

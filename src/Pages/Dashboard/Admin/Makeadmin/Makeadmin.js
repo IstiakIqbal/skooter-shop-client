@@ -4,7 +4,7 @@ import { useRef } from "react/cjs/react.development";
 const Makeadmin = () => {
   const emailRef = useRef();
   const handleMakeAdminBtn = (e) => {
-    fetch(`http://localhost:5000/allusers?email=${emailRef.current.value}`, {
+    fetch(`https://murmuring-caverns-40870.herokuapp.com/allusers?email=${emailRef.current.value}`, {
       method: "PUT",
     })
       .then((res) => res.json())

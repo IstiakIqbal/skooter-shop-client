@@ -6,13 +6,13 @@ import Header from "../Shared/Header/Header";
 const Skooters = () => {
   const [skooters, setSkooters] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/skooters")
+    fetch("https://murmuring-caverns-40870.herokuapp.com/skooters")
       .then((res) => res.json())
       .then((data) => setSkooters(data));
   }, []);
   return (
     <div>
-      <Header/>
+      <Header />
       <section className="flex justify-center my-16">
         <p className="text-4xl font-bold text-gray-700">
           Our <span className="text-5xl text-red-500">Skooters</span> for you
@@ -25,7 +25,7 @@ const Skooters = () => {
           ))}
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

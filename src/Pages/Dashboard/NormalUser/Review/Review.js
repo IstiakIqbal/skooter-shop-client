@@ -14,7 +14,7 @@ const Review = () => {
       message: msgRef.current.value,
       rate: parseInt(rateRef.current.value),
     };
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://murmuring-caverns-40870.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

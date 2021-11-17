@@ -13,7 +13,7 @@ const PlaceOrder = () => {
   const [skooter, setSkooter] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/skooters")
+    fetch("https://murmuring-caverns-40870.herokuapp.com/skooters")
       .then((res) => res.json())
       .then((data) => {
         setSkooter(data.find((pd) => pd._id == _id));
@@ -31,7 +31,7 @@ const PlaceOrder = () => {
       phone: phoneRef.current.value,
       status: "pending",
     };
-    fetch("http://localhost:5000/orders", {
+    fetch("https://murmuring-caverns-40870.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

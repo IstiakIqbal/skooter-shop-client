@@ -4,7 +4,7 @@ import Manageproduct from "./Manageproduct";
 const Manageproducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/skooters")
+    fetch("https://murmuring-caverns-40870.herokuapp.com/skooters")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -13,7 +13,7 @@ const Manageproducts = () => {
       "Are you sure, you want to delete this product?"
     );
     if (confirmLog) {
-      fetch(`http://localhost:5000/skooters?id=${id}`, {
+      fetch(`https://murmuring-caverns-40870.herokuapp.com/skooters?id=${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -35,7 +35,7 @@ const Manageproducts = () => {
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
-                  <th
+                    <th
                       scope="col"
                       className="text-center px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
